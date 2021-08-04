@@ -1,0 +1,16 @@
+
+    fun showAllOrders(){
+        val arrayAdapter: ArrayAdapter<*>
+        val order1 = Orders(1,"C1","Cliente C1")
+        val order2 = Orders(2,"C2","Cliente C2")
+        val order3 = Orders(3,"C3","Cliente C3")
+
+        val listOrders = listOf(order1, order2, order3)
+        val idClients = mutableListOf("C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2","C1", "C2")
+
+        val listviewOrders = findViewById<ListView>(R.id.listviewOrders)
+
+        arrayAdapter =  ArrayAdapter(this,android.R.layout.simple_list_item_1, listOrders )
+        listviewOrders.adapter = arrayAdapter
+
+    }
